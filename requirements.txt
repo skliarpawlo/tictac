@@ -1,0 +1,2 @@
+# pyAudio http://people.csail.mit.edu/hubert/pyaudio/
+wave
