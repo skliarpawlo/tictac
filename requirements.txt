@@ -1,2 +1,2 @@
-# pyAudio http://people.csail.mit.edu/hubert/pyaudio/
+# install pyAudio http://people.csail.mit.edu/hubert/pyaudio/
 wave

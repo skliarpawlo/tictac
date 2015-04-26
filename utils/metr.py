@@ -7,10 +7,10 @@ class Tick(object):
 
     CHUNK = 1024
 
-    def __init__(self, beats_per_min=None):
+    def __init__(self, beats_per_min=None, wav_file=None):
         self._beats_per_min = beats_per_min
 
-        sound = wave.open("beep.wav")
+        sound = wave.open(wav_file)
         try:
             player = pyaudio.PyAudio()
             self._stream = player.open(
@@ -33,9 +33,9 @@ class Tick(object):
         time.sleep(60. / self._beats_per_min - dt)
 
 
-def start_metronome(beats_per_min, ticks=None, mins=None, speed_up=-1, upper_limit=-1):
+def start_metronome(beats_per_min, ticks=None, mins=None, speed_up=-1, upper_limit=-1, wav_file='beep.wav'):
 
-    tick = Tick()
+    tick = Tick(wav_file=wav_file)
     while True:
 
         tick.set_beats_per_min(beats_per_min)

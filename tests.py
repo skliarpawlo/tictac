@@ -1,4 +1,5 @@
 import timeit
+import subprocess
 
 
 def test_accuracy():
@@ -8,3 +9,11 @@ def test_accuracy():
         number=2,
     )
     assert abs(res - 10.) < 0.1
+
+
+def test_usage():
+    exit_code = subprocess.call(
+        ['./tictoc.py', '--bpm', '60', '--mins', '0.1', '--speed-up', '10', '--upper-limit', '70']
+    )
+
+    assert exit_code == 0

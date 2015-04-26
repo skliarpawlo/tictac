@@ -11,4 +11,5 @@ if __name__ == '__main__':
         mins=args.mins,
         speed_up=args.speed_up,
         upper_limit=args.upper_limit,
+        wav_file=args.wav,
     )
