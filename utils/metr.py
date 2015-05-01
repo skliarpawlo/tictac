@@ -23,6 +23,7 @@ class Tick(object):
             sound.close()
 
     def set_beats_per_min(self, v):
+        print("bpm={bpm}".format(bpm=v))
         self._beats_per_min = v
 
     def toc(self):
